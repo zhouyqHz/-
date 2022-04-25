@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "result": {
+    "0~9999":[{
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "Fleet": "Su Zhou"
+    }],
+    "10000~19999":[{
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "Fleet": "Su Zhou"
+    }],
+    "20000~29999":[{
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "Fleet": "Su Zhou"
+    }],
+    "30000~39999":[{
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "Fleet": "Su Zhou"
+    }]
+  }
+}

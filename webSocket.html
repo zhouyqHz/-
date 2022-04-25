@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>websocket测试</title>
+</head>
+<body>
+
+<h3><span style="color:red">WebSocket测试信息</span</h3><p>
+<button type="button" id="btn" value="btn" onclick="doSend()">发送消息</button>
+<div id="output"></div>
+<script type="text/javascript">
+	var output; 
+    var socket;
+    if (typeof (WebSocket) == "undefined") {
+        console.log("遗憾：您的浏览器不支持WebSocket");
+    } else {
+        console.log("恭喜：您的浏览器支持WebSocket");
+		output = document.getElementById("output"); 
+        //实现化WebSocket对象
+        //指定要连接的服务器地址与端口建立连接
+        //注意ws、wss使用不同的端口。我使用自签名的证书测试
+        //无法使用wss，浏览器打开WebSocket时报错
+        //ws对应http、wss对应https。
+        // socket = new WebSocket("ws://localhost:9901/hangdao-service/ws/navguide");
+		socket = new WebSocket("ws://180.184.67.201:80/hangdao-service/ws/navguide");
+        //连接打开事件
+        socket.onopen = function() {
+            writeToScreen("Socket已打开", "green");
+            //socket.send("Client: 消息发送测试");
+        };
+        //收到消息事件
+        socket.onmessage = function(e) {
+			writeToScreen(e.data, "blue");
+            console.log(e.data);
+        };
+        //连接关闭事件
+        socket.onclose = function() {
+			writeToScreen("Socket已关闭", "red");
+            console.log("Socket已关闭");
+        };
+        //发生了错误事件
+        socket.onerror = function(e) {
+			writeToScreen(e.data, "red");
+            alert("Socket发生了错误");
+        }
+
+        //窗口关闭时，关闭连接
+        window.unload=function() {
+            socket.close();
+        };
+    }
+	
+	function doSend() {
+		//CONNECTING：	值为0，表示正在连接；
+		//OPEN：		值为1，表示连接成功，可以通信了；
+		//CLOSING：		值为2，表示连接正在关闭；
+		//CLOSED：		值为3，表示连接已经关闭，或者打开连接失败。
+		console.log(socket.readyState);
+		if (socket.readyState === 1) {
+			var message = {"shipid":"CB00000001", "data":"浙货远航"};
+			writeToScreen(JSON.stringify(message));  
+			socket.send(JSON.stringify(message));
+		}
+		 
+    }
+	
+	function writeToScreen(message, color) { 
+        var pre = document.createElement("p"); 
+        pre.style.wordWrap = "break-word"; 
+		pre.style.color = color; 
+        pre.innerHTML = message; 
+        output.appendChild(pre); 
+    }  
+</script>
+
+</body>
+</html>

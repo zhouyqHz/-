@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="https://www.minedata.cn/portal/static/images/common/favicon.ico">
+    <!-- <link rel="stylesheet" href="./lib/minemap/v2.0/minemap.css"> -->
+
+    <link rel="stylesheet" href="https://minedata.cn/support/static/api/demo/javascript-3d-api/zh/css/demo.css">
+      <!-- 深色地图控件 引入minemap-dark.css -->
+      <!-- <link rel="stylesheet" href="https://minedata.cn/minemapapi/v2.1.0/minemap-dark.css"> -->
+    <!-- 引入MineMap API插件 -->
+    <link rel="stylesheet" href="./lib/minemap/v2.0/minemap.css">
+    <!-- <script src="https://minedata.cn/minemapapi/v3.3.0/minemap.js"></script> -->
+    <script src="./lib/minemap.js"></script>
+    <link rel="stylesheet" href="./lib/edit/minemap-edit.css">
+    <link rel="stylesheet" href="./lib/edit/iconfont.css">
+    <link rel="stylesheet" href="./lib/edit/myself.css">
+    <title>交科院平台DEMO</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but test doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+
+    <!-- <script src="https://cdn.bootcss.com/Turf.js/5.1.6/turf.min.js"></script> -->
+    <script src="./lib/edit/minemap-edit.js" type="text/javascript"></script>
+    <script src="./lib/edit/clip.js" type="text/javascript"></script>
+    <script src="./lib/gcoord.js" type="text/javascript"></script>
+    <!--<script src="<%= webpackConfig.name%>minemapapi/v2.0.0/plugins/edit/minemap-edit.js"></script>-->
+    <script src="./lib/turf/turf.min.js" type="text/javascript"></script>
+    <script src="./lib/minemapUtil/minemap-util.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./lib/wellknown.js" type="text/javascript">
+    <link rel="stylesheet" href="./lib/moveAlong3.js" type="text/javascript">
+    <script type="text/javascript">
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        (function (console) {
+        console.save = function (data, filename) {
+          if (!data) {
+            console.error('Console.save: No data');
+            return;
+          }
+
+          if (!filename) filename = 'console.json';
+          if (typeof data === "object") {
+            data = JSON.stringify(data, undefined, 4)
+          }
+
+          var blob = new Blob([data], {type: 'text/json'}),
+              e = document.createEvent('MouseEvents'),
+              a = document.createElement('a');
+          a.download = filename;
+          a.href = window.URL.createObjectURL(blob);
+          a.dataset.downloadurl = ['text/json', a.download, a.href].join(':');
+          e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+          a.dispatchEvent(e)
+        }
+
+      })(console);
+    </script> -->
+    <!-- built files will be auto injected -->
+  </body>
+</html>

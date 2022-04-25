@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>实时轨迹渲染</title>
+    <script src="https://minedata.cn/minemapapi/minemap-CDN/lodash/4.17.21/lodash.min.js"></script>
+    <!-- 引入MineMap API插件 -->
+    <link rel="stylesheet" href="https://minedata.cn/minemapapi/v3.3.0/minemap.css">
+    <script src="https://minedata.cn/minemapapi/v3.3.0/minemap.js"></script>
+    <script src="https://minedata.cn/minemapapi/minemap-plugins/track/track-util.js"></script>
+    <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        #plate-btn {
+            background-color: #fff;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+			border-radius:50px;
+            line-height: 32px;
+            vertical-align: middle;
+            text-align: center;
+            z-index: 10;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btns {
+            position: absolute;
+            z-index: 999;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+        <div id="plate-btn" onclick="carPlateBtnClick()">显示车牌</div>
+    </div>
+    <script>
+        minemap.domainUrl = 'https://minedata.cn';
+	minemap.dataDomainUrl = 'https://minedata.cn';
+	minemap.serverDomainUrl = 'https://minedata.cn';
+	minemap.spriteUrl = 'https://minedata.cn/minemapapi/v3.3.0/sprite/sprite';
+	minemap.serviceUrl = 'https://minedata.cn/service/';
+
+        minemap.key = '16be596e00c44c86bb1569cb53424dc9';
+        minemap.solution = 12877; 
+
+        var map = new minemap.Map({
+            container: "map",
+            style: {
+                "glyphs": "minemap://fonts/{fontstack}/{range}",
+                "sprite": "minemap://sprite/sprite",
+                "sources": {},
+                "layers": [],
+                "version": 8
+            },
+            center: [120.24805053680325, 29.715189931766076],
+            zoom: 17.7,
+            bearing: -9.599999999999795,
+            pitch: 60.50000000000003,
+            maxZoom: 21,
+            minZoom: 3
+        });
+
+        var timer = null; // 定时器
+        var _curVehicleId = ""; // 车辆 id 存放
+        var _showCarPlate = false; // 是否显示车牌
+
+        map.on("load", () => {
+            map.addSource("sphere-image-globe", {
+                url: "https://minedata.cn/minemapapi/v3.3.0/assets/earth.jpg",
+                radius: minemap.R,
+                type: "sphere-image",
+                renderInner: false,
+                gridSamples: 9,
+                debug: false,
+                renderAtmosphere: true
+            });
+            map.addSource("sphere-image-skybox", {
+                url: "https://minedata.cn/minemapapi/v3.3.0/assets/sky13m.jpg",
+                dayTextureUrl: "https://minedata.cn/minemapapi/v3.3.0/assets/back.jpg",
+                radius: 1,
+                type: "sphere-image",
+                renderInner: true,
+                gridSamples: 9,
+                debug: false
+            });
+
+            map.addSource("IMAGERY_SOURCE", {
+                "type": "raster",//数据源类型：栅格数据源
+                "tiles": ["https://smap.minedata.cn/service/map/satellite?z={z}&x={x}&y={y}"], //瓦片服务地址
+                "tileSize": 256//瓦片尺寸
+            });
+
+            map.addLayer({
+                "id": "IMAGERY",
+                "type": "raster", //图层类型为"raster"
+                "source": "IMAGERY_SOURCE",
+                "minzoom": 1,
+                "maxzoom": 23,
+                "paint": {
+                    "raster-opacity": 1
+                }
+            });
+
+            // 添加精细化道路模型
+            addHDroad();
+
+            show();
+
+            map.repaint = true;
+            map.timer.state = true;
+        });
+
+        map.on("click", (e) => {
+            const features = map.queryRenderedFeatures(e.point, { layers: ["vehicle_track_symbol"] });
+            if (features.length) {
+                _curVehicleId = features[0].properties.equip_id;     //todo 引擎改了变量名字，设备id！！！！！
+            }
+        });
+
+        function addHDroad() {
+            map.addSource("hd-road", {
+                type: "3d-model",
+                data: "https://minedata.cn/minemapapi/MineMap3dEngine/models/huawei-hd/HD/21ZJS051NA1.glb", // 要加载的gltf格式数据
+                modelFolder: "https://minedata.cn/minemapapi/MineMap3dEngine/models/huawei-hd/HD/image", // 该数据引用图片等资源的文件夹路径
+                scale: [1, 1, 1], // 在xyz轴方向上的缩放比例
+                translation: [0, 0, 0], // 在xyz轴方向上的移动量，单位为m
+                rotation: [0, 0, 0], // 绕xyz轴方向上的旋转，单位为度
+                location: [120.2469803142035, 29.71612832972716] // 锚点（坐标原点）的经纬度位置
+            });
+
+            map.addLayer({
+                id: "hd-road",
+                type: "3d-model",
+                source: "hd-road",
+                minzoom: 16
+            });
+        }
+
+        function addTrackSourceAndLayers(modelGltf) {
+            map.addSource("vehicle_track_symbol", {
+                type: "3d-model",
+                data: modelGltf,
+                modelFolder: "./models/",
+                configuration: {
+                    renderType: "track",
+                    /*** 用于指定属性字段来匹配模型的名称 ***/
+                    modelNames: ["car-s-1"],
+                    modelMap: {
+                        "1": "car-s-1"
+                    },
+                    modelMatchKeyName: "speed_level",
+                    // translation: [0, 1, 0],  //对于模型的局部坐标轴的xyz
+                    /*** 用于指定属性字段来匹配模型的名称 end ***/
+                    trackData: [], // 轨迹数据
+                    realtime: true, // 与 示例 https://www.minedata.cn/support/api/demo/javascript-3d-api/zh/layer/3d/model-track-layer 区别
+                    showDisplayBoard: false, // 控制是否显示展示板 与 bgImageMathOptions 参数一起使用
+                    // bgImageMathOptions: { // 展示板相关参数
+                    //     scale: [1 / 10, 1 / 10, 1 / 10], // 控制大小
+                    //     translationMatchKey: "vehicleType",
+                    //     translation: {
+                    //         "小型轿车": [0, 0, 0],
+                    //         "小型越野客车": [0, 10, 0],
+                    //         "": [0, 6, 0]
+                    //     }, // 控制平移量，可用于设置高度，单位 m
+                    //     width: 60, // 画布的宽
+                    //     height: 60, // 画布的高
+                    //     // fontSize: 10, // 文字大小
+                    //     // fontColor: "white", // 文字颜色
+                    //     textTop: 0, // 文字上边距
+                    //     images: { // 背景图，会根据数据属性进行切换
+                    //         active: "./WechatIMG315.png",
+                    //         normal: "./WechatIMG315.png"
+                    //     }
+                    // }
+                }
+            });
+
+            map.addLayer({
+                id: "vehicle_track_symbol",
+                type: "3d-model",
+                source: "vehicle_track_symbol"
+            });
+        }
+
+        function _moving(data) {
+            // 数据处理
+            const _data = _getTrackGeoJSON(data);
+            _data.features.forEach(f => {
+                f.properties.link_status = _curVehicleId === f.properties.vehicle_id ? "active" : "normal";
+                f.properties.speed_level = _getSpeedLevel(f.properties.speed);
+            });
+
+            // 形成轨迹数据
+            const trackUtil = new minemap.TrackUtil({ realtime: true });
+            /**
+             * 依据时间戳的geojson数据进行解析，这个目前初步以分钟概念，推广到任意时间区间。
+             * 说明： 这里面是有多条轨迹
+             * trackUtil.parseTimestampGeojsonTrackData
+             * @param {{type:'FeatureCollection',features:[]}} data
+             * @param {string} linkIdName 车辆唯一 id 索引名称
+             * @param {string} linkTimestampName 当前点位数据索引名称
+             * @param {string} totalStartTimestampName 当前批次轨迹的统一开始采样时间
+             * @param {string} totalEndTimestampName 当前批次轨迹的统一结束采样时间
+             * @param {string} displayBoardImageMatchName 看板的匹配字段
+             * @param {string} textName 看板的匹配字段
+             */
+            trackUtil.parseTimestampGeojsonTrackData(_data, "vehicle_id", "link_time", "total_time_start", "total_time_end", "link_status", "plateNo");
+            const trackData = trackUtil.getTrack();
+
+            const source = map.getSource("vehicle_track_symbol");
+            if (source) {
+                // 更新 Configuration 的属性
+                source.updateConfiguration({ trackData: trackData });
+            }
+        }
+
+        function _getTrackGeoJSON(data) {
+            const fmaps = new Map();
+            data.features.forEach(f => {
+                const id = f.properties.vehicle_id;
+                if (!fmaps.get(id)) fmaps.set(id, []);
+                fmaps.get(id).push(f);
+            });
+            const seqSort = (a, b) => {
+                return a.properties.link_time - b.properties.link_time;
+            };
+            const features = [];
+            fmaps.forEach((arr, id) => {
+                if (arr.length) {
+                    arr.sort(seqSort);
+                    const startTime = arr[0].properties.link_time;
+                    const endTime = arr[arr.length - 1].properties.link_time;
+                    for (let i = 0, len = arr.length; i < len; i++) {
+                        const f = arr[i];
+                        f.properties.total_time_start = startTime;
+                        f.properties.total_time_end = endTime;
+                        features.push(f);
+                    }
+                }
+            });
+            return {
+                type: "FeatureCollection",
+                features: features
+            };
+        }
+
+        function _getSpeedLevel(s) {
+            if (s < 10) {
+                return "1";
+            } else if (s >= 10 && s < 20) {
+                return "2";
+            } else if (s >= 20 && s < 30) {
+                return "3";
+            } else if (s >= 30 && s < 40) {
+                return "4";
+            } else if (s >= 40 && s < 50) {
+                return "5";
+            } else if (s >= 50) {
+                return "6";
+            }
+        }
+
+        // 显隐车牌信息
+        function carPlateBtnClick() {
+            const source = map.getSource("vehicle_track_symbol");
+            if (_showCarPlate) {
+                // _showCarPlate = false;
+                document.getElementById("plate-btn").innerText = "显示车牌";
+                if (source) {
+                    source.updateConfiguration({ showDisplayBoard: false });
+                }
+            } else {
+                _showCarPlate = true;
+                document.getElementById("plate-btn").innerText = "隐藏车牌";
+                if (source) {
+                    source.updateConfiguration({ showDisplayBoard: true });
+                }
+            }
+        }
+
+        var gltfModel, trackLine
+        function show() {
+            var center = [120.2479259444613,29.71536931851271];
+            var radius = 0.008;
+            var options = {steps: 80, units: 'kilometers', properties: {foo: 'bar'}};
+            var circle = turf.circle(center, radius, options);
+            
+            circle.geometry.type='LineString'
+            circle.geometry.coordinates=circle.geometry.coordinates[0]
+            console.log('测试；',circle)
+            map.addSource("lineSource", {
+                "type": "geojson",
+                "data": circle
+            });
+            map.addLayer({
+                "id": "lineLayer",
+                "type": "line",//图层类型为"line"
+                "source": "lineSource",
+                "layout": {
+                    "line-join": "round",
+                    "line-cap": "round"
+                },
+                "paint": {
+                    "line-width": 3,
+                    "line-color": 'pink'
+                },
+            });
+            var center2 = [120.2479259444613,29.71536931851271];
+            var radius2 = 0.006;
+            var options2 = {steps: 80, units: 'kilometers', properties: {foo: 'bar'}};
+            var circle2 = turf.circle(center2, radius2, options2);
+            circle2.geometry.type='LineString'
+            circle2.geometry.coordinates=circle2.geometry.coordinates[0]
+            console.log('测试2；',circle2)
+            map.addSource("lineSource2", {
+                "type": "geojson",
+                "data": circle2
+            });
+            map.addLayer({
+                "id": "lineLayer2",
+                "type": "line",//图层类型为"line"
+                "source": "lineSource2",
+                "layout": {
+                    "line-join": "round",
+                    "line-cap": "round"
+                },
+                "paint": {
+                    "line-width": 3,
+                    "line-color": 'red'
+                },
+            });
+            if (gltfModel) {
+                // 将模型数据深拷贝传入，避免minemap对数据进行修改后造成的错误
+                var deepGltfModel = _.cloneDeep(gltfModel);
+                // 添加小车 3d-model图层
+                addTrackSourceAndLayers(deepGltfModel);
+            } else {
+                // 添加小车模型
+                const carGltfPromise = ["car-s-1", "car-s-2", "car-s-3", "car-s-4", "car-s-5", "car-s-6"].map(n => {
+                    return new Promise((resolve, reject) => {
+                        minemap.util.getJSON({ url: `https://minedata.cn/minemapapi/MineMap3dEngine/models/huawei-hd/${n}.gltf` }, (error, data) => {
+                            if (error) {
+                                console.error(new Error(`${n}.gltf` + " load error!"));
+                                resolve(null);
+                                return;
+                            }
+                            resolve(data);
+                        });
+                    });
+                });
+                Promise.all(carGltfPromise).then(objects => {
+                    var trackUtil = new minemap.TrackUtil({ realtime: true });
+                    // 合并小车 gltf 模型
+                    gltfModel = trackUtil.conbineGltfs(objects);
+                    var deepGltfModel = _.cloneDeep(gltfModel);
+                    // 添加小车 3d-model图层
+                    addTrackSourceAndLayers(deepGltfModel);
+                });
+            }
+
+            if (trackLine) {
+                if (timer) {
+                    clearInterval(timer)
+                    timer = null
+                }
+                __movingFun()
+            } else {
+                // 此处为模拟数据，更多的需要利用 webworker 来进行实时的数据对接
+                minemap.util.getJSON({ url: "https://minedata.cn/minemapapi/MineMap3dEngine/json/tracking-30s.json" }, (error, data) => {
+                    trackLine = data
+                    __movingFun()
+                });
+            }
+
+
+
+            function __movingFun() {
+                if (trackLine.status) {
+                    // 循环显示数据
+                    var index = 0;
+                    timer = setInterval(() => {
+                        _moving(trackLine.datas[index]);
+                        index++;
+                        if (index >= trackLine.datas.length) {
+                            index = 0;
+                        }
+                    }, 1000);
+                }
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,7 @@
+.icon-eye-close:before {
+  content: "\e771";
+}
+
+.icon-eye-open:before {
+  content: "\e77b";
+}

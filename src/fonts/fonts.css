@@ -1,0 +1,19 @@
+
+@font-face {
+  font-family: 'DINMittelschrift-Alternate';
+  src: url('./DINMittelschrift-Alternate.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MFShangHei_Noncommercial-Regular';
+  src: url('./MFShangHei_Noncommercial-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceHanSansCN-Heavy';
+  src: url('./SourceHanSansCN-Heavy.otf');
+  font-weight: normal;
+  font-style: normal;
+}

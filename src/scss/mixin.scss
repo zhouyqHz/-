@@ -1,0 +1,59 @@
+@mixin maxLimit($w){
+  max-width: $w;
+  overflow:hidden;
+  white-space:nowrap;
+  word-break:break-all;
+  text-overflow:ellipsis;
+}
+//封装transform兼容写法
+@mixin transform ($x) {
+  transform: $x;
+  -ms-transform: $x;
+  -moz-transform: $x;
+  -webkit-transform: $x;
+  -o-transform: $x;
+}
+//渐变兼容性写法
+@mixin gradient ($deg,$color1,$p1,$color2,$p2) {
+  background:linear-gradient($deg,$color1 $p1,$color2 $p2);
+  background:-webkit-linear-gradient($deg,$color1 $p1,$color2 $p2);
+  background:-moz-linear-gradient($deg,$color1 $p1,$color2 $p2);
+  background:-o-linear-gradient($deg,$color1 $p1,$color2 $p2);
+  background:-ms-linear-gradient($deg,$color1 $p1,$color2 $p2);
+}
+//封装动画效果兼容写法
+@mixin animation($name,$s){
+  animation:$name $s 1 forwards;
+  -ms-animation:$name $s 1 forwards;
+  -moz-animation:$name $s 1 forwards;
+  -webkit-animation:$name $s 1 forwards;
+  -o-animation:$name $s 1 forwards;
+}
+//封装keyFrames兼容性写法
+@mixin keyframes($animationName){
+  @-webkit-keyframes #{$animationName}{
+    @content;
+  }
+  @-moz-keyframes #{$animationName}{
+    @content;
+  }
+  @-o-keyframes #{$animationName}{
+    @content;
+  }
+  @keyframes #{$animationName}{
+    @content;
+  }
+}
+//设置背景图
+@mixin setBkByHW($bkUrl,$width,$height){
+  background: url($bkUrl) no-repeat center;
+  background-size: $width $height;
+}
+//旋转兼容写法
+@mixin rotate($deg){
+  transform:rotate($deg);
+  -ms-transform:rotate($deg); 	/* IE 9 */
+  -moz-transform:rotate($deg); 	/* Firefox */
+  -webkit-transform:rotate($deg); /* Safari 和 Chrome */
+  -o-transform:rotate($deg); 	/* Opera */
+}

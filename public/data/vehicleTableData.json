@@ -1,0 +1,71 @@
+{
+  "success": true,
+  "result": [
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0001",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 1,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "off"
+    },
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0002",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 2,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "6"
+    },
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0003",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 3,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "10"
+    },
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0004",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 1,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "2"
+    },
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0005",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 2,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "8"
+    },
+    {
+      "vehicleVIN": "LVGBXXXXXXXX0006",
+      "vehicleName": "111XXXXX",
+      "license": "W1028XX",
+      "brand": "Toyota",
+      "model": "Levin HV",
+      "fleetId": 3,
+      "year": "2020",
+      "time": "2020-XX-XX 19:36:XX",
+      "status": "3"
+    }
+  ]
+}

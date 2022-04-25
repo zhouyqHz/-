@@ -1,0 +1,575 @@
+{
+  "accessors": [
+    {
+      "name": "matou-Mesh_0_positions",
+      "componentType": 5126,
+      "count": 288,
+      "min": [
+        -8466.771484375,
+        2608.260009765625,
+        1480.118896484375
+      ],
+      "max": [
+        8443.76171875,
+        2694.865966796875,
+        6031.046875
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "matou-Mesh_0_normals",
+      "componentType": 5126,
+      "count": 288,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "matou-Mesh_0_texcoords",
+      "componentType": 5126,
+      "count": 288,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "name": "matou-Mesh_0_indices",
+      "componentType": 5123,
+      "count": 432,
+      "min": [
+        0
+      ],
+      "max": [
+        287
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "name": "matou-Mesh_1_positions",
+      "componentType": 5126,
+      "count": 156,
+      "min": [
+        -8492.361328125,
+        2691.004150390625,
+        1911.816162109375
+      ],
+      "max": [
+        8461.3408203125,
+        3042.670654296875,
+        2614.651611328125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 3456
+    },
+    {
+      "name": "matou-Mesh_1_normals",
+      "componentType": 5126,
+      "count": 156,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        0,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 3456
+    },
+    {
+      "name": "matou-Mesh_1_texcoords",
+      "componentType": 5126,
+      "count": 156,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 2304
+    },
+    {
+      "name": "matou-Mesh_1_indices",
+      "componentType": 5123,
+      "count": 288,
+      "min": [
+        0
+      ],
+      "max": [
+        155
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 864
+    },
+    {
+      "name": "matou-Mesh_2_positions",
+      "componentType": 5126,
+      "count": 48,
+      "min": [
+        -8492.361328125,
+        2933.3828125,
+        1911.816162109375
+      ],
+      "max": [
+        8461.3408203125,
+        3042.670654296875,
+        2614.651611328125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 5328
+    },
+    {
+      "name": "matou-Mesh_2_normals",
+      "componentType": 5126,
+      "count": 48,
+      "min": [
+        -0.3518998622894287,
+        0.9354196786880493,
+        0
+      ],
+      "max": [
+        0.35353928804397583,
+        0.9360378384590149,
+        0
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 5328
+    },
+    {
+      "name": "matou-Mesh_2_texcoords",
+      "componentType": 5126,
+      "count": 48,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 3552
+    },
+    {
+      "name": "matou-Mesh_2_indices",
+      "componentType": 5123,
+      "count": 72,
+      "min": [
+        0
+      ],
+      "max": [
+        47
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 1440
+    },
+    {
+      "name": "matou-Mesh_3_positions",
+      "componentType": 5126,
+      "count": 3024,
+      "min": [
+        -8852.369140625,
+        45.14405822753906,
+        1480.118896484375
+      ],
+      "max": [
+        8858.9521484375,
+        6326.0205078125,
+        6031.046875
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 5904
+    },
+    {
+      "name": "matou-Mesh_3_normals",
+      "componentType": 5126,
+      "count": 3024,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 5904
+    },
+    {
+      "name": "matou-Mesh_3_texcoords",
+      "componentType": 5126,
+      "count": 3024,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 3936
+    },
+    {
+      "name": "matou-Mesh_3_indices",
+      "componentType": 5123,
+      "count": 4536,
+      "min": [
+        0
+      ],
+      "max": [
+        3023
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 1584
+    },
+    {
+      "name": "matou-Mesh_4_positions",
+      "componentType": 5126,
+      "count": 24,
+      "min": [
+        -10011.251953125,
+        0.6034010052680969,
+        -4444.693359375
+      ],
+      "max": [
+        10011.251953125,
+        108.91857147216797,
+        4444.693359375
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 42192
+    },
+    {
+      "name": "matou-Mesh_4_normals",
+      "componentType": 5126,
+      "count": 24,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 42192
+    },
+    {
+      "name": "matou-Mesh_4_texcoords",
+      "componentType": 5126,
+      "count": 24,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 28128
+    },
+    {
+      "name": "matou-Mesh_4_indices",
+      "componentType": 5123,
+      "count": 36,
+      "min": [
+        0
+      ],
+      "max": [
+        23
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 10656
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "matou",
+      "byteLength": 124008,
+      "uri": "matou.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 42480,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 42480,
+      "byteOffset": 42480,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 28320,
+      "byteOffset": 84960,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_3",
+      "buffer": 0,
+      "byteLength": 10728,
+      "byteOffset": 113280,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "uri": "hangbiao-zhuzi_1.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "材质",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.80000001192093,
+          0.80000001192093,
+          0.80000001192093,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.4",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8941176533699,
+          0.46274510025978,
+          0.29411765933037,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.5",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.63921570777893,
+          0.1803921610117,
+          0.19607843458652,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.3",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3647058904171,
+          0.37647059559822,
+          0.40392157435417,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "matou-Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 3,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 4,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "matou",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

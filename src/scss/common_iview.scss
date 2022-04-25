@@ -1,0 +1,1027 @@
+
+@import "./img";
+@import "./mixin";
+//------------------------------------iview样式覆盖-----------------------------------
+.ivu-checkbox-inner:after{
+  border:none;
+}
+.ivu-layout-sider-children{
+  height:100vh
+}
+.ivu-layout-header{
+  background: #242E42;
+  padding : 0 0.1rem
+}
+.ivu-layout-sider{
+   min-width:74px;
+   max-width: 74px;
+}
+.ivu-menu-dark{
+  background:  #242E42;
+}
+.ivu-select-dropdown{
+  background: #1F2736;
+}
+.ivu-menu-item-selected,.ivu-menu-item-active{
+  // height:88px
+  border-bottom: 5px solid #0077FF;
+}
+.ivu-menu-submenu-title{
+  height:88px
+}
+.ivu-menu-submenu-title span>i, .ivu-menu-submenu-title>i{
+  display:none
+}
+// .ivu-table-wrapper.car-form-table .ivu-table .ivu-table-header thead tr th .ivu-table-cell.ivu-table-cell-with-selection.is-indeterminate .ivu-checkbox-wrapper .ivu-checkbox .ivu-checkbox-inner:after {
+//   margin-top: 0rem;
+//   margin-left: 0rem;
+// }
+.el-checkbox__inner{
+  &.is-indeterminate{
+    .ivu-checkbox-wrapper{
+      .ivu-checkbox{
+        .ivu-checkbox-inner{
+          &:after{
+            content: '';
+            display: table;
+            width: 8px;
+            height: 8px;
+            background-color: #0E6BDC;
+            position: absolute;
+            top: 20%;
+            transform: none;
+            left: 25%;
+            border: none;
+            transition: none;
+          }
+        }
+      }
+    }
+  }
+}
+//report定制化表格样式（88高度表格）
+//.report_88h_style{
+//  .ivu-table-wrapper{
+//    .ivu-table,.ivu-table-fixed{
+//      background-color: transparent;
+//      &:before{
+//        height:0;
+//      }
+//      .ivu-table-header,.ivu-table-fixed-header{
+//        thead{
+//          tr{
+//            th{
+//              padding: 0;
+//              height: 48px;
+//              border:none;
+//              .ivu-table-cell{
+//                display: flex;
+//                align-items: center;
+//                &.ivu-table-cell-with-selection{
+//                  justify-content: center;
+//                  &.is-indeterminate{
+//                    .ivu-checkbox-wrapper{
+//                      .ivu-checkbox{
+//                        .ivu-checkbox-inner{
+//                          &:after{
+//                            content: '';
+//                            display: table;
+//                            width: 8px;
+//                            height: 8px;
+//                            background-color: #0E6BDC;
+//                            position: absolute;
+//                            top: 20%;
+//                            transform: none;
+//                            left: 25%;
+//                            border: none;
+//                            transition: none;
+//                          }
+//                        }
+//                      }
+//                    }
+//                  }
+//                  .ivu-checkbox-wrapper{
+//                    .ivu-checkbox {
+//                      &.ivu-checkbox-checked {
+//                        .ivu-checkbox-inner {
+//                          background-color: #0E6BDC;
+//                          border-color: #0E6BDC;
+//                          border-radius: 2px;
+//                          &:after {
+//                            width: 6px;
+//                            height: 12px;
+//                            top:0
+//                            //border-color: #0E6BDC;
+//                          }
+//                        }
+//                      }
+//                    }
+//                  }
+//                }
+//                .ivu-poptip{
+//                  .ivu-poptip-rel{
+//                    .ivu-table-filter{
+//                      i{
+//                        &:before{
+//                          //content: '\e827';
+//                          display: inline-block;
+//                          width: 19px;
+//                          height: 19px;
+//                          //todo:更换成本地图标
+//                          //background: url("./img/filter-normal.svg") no-repeat center;
+//                          //background-size: 100% 100%;
+//                        }
+//                        &.on{
+//                          &:before{
+//                            //content: '\e827';
+//                            display: inline-block;
+//                            width: 19px;
+//                            height: 19px;
+//                            //todo:更换成本地图标
+//                            //background: url("./img/filter-active.svg") no-repeat center;
+//                            //background-size: 100% 100%;
+//                          }
+//                        }
+//                      }
+//                    }
+//                  }
+//                }
+//              }
+//              &.left-space{
+//                .ivu-table-cell{
+//                  padding-left: 50px;
+//                }
+//              }
+//              &.left-space-42{
+//                .ivu-table-cell{
+//                  padding-left: 42px;
+//                }
+//              }
+//              &.left-space-32{
+//                .ivu-table-cell{
+//                  padding-left: 32px;
+//                }
+//              }
+//              &.left-name{
+//                .ivu-table-cell{
+//                  // padding-right: 50px;
+//                }
+//              }
+//              &.left-desc{
+//                .ivu-table-cell{
+//                  padding-left: 50px;
+//                }
+//              }
+//              &.time{
+//                .ivu-table-cell{
+//                  padding-right: 120px;
+//                }
+//              }
+//              &.right-space{
+//                .ivu-table-cell{
+//                  padding-right: 50px;
+//                }
+//              }
+//              &.ivu-table-column-right{
+//                .ivu-table-cell{
+//                  justify-content: flex-end;
+//                }
+//              }
+//              &.ivu-table-column-center{
+//                .ivu-table-cell{
+//                  justify-content: center;
+//                }
+//              }
+//            }
+//          }
+//        }
+//      }
+//      th{
+//        background-color:#353F54;
+//        color:#fff;
+//        font-size: 14px;
+//        font-weight: 400;
+//      }
+//      td{
+//        background-color:transparent;
+//        border:none;
+//        color:#fff;
+//        font-size: 14px;
+//        height: 88px !important;
+//        &.no-text{
+//          color:#8A8E9C;
+//        }
+//      }
+//      &.ivu-table-stripe{
+//        .ivu-table-body,.ivu-table-fixed-body{
+//          tr:nth-child(1n){
+//            td{
+//              background-color:#313A4E;
+//            }
+//          }
+//          tr:nth-child(2n){
+//            td{
+//              background-color:#353F54;
+//            }
+//          }
+//          tr.ivu-table-row-hover{
+//            td{
+//              background-color: #3F4962;
+//            }
+//          }
+//          .ivu-table-row{
+//            &.ivu-table-row-highlight{
+//              td{
+//                background-color: #3F4962;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+.ivu-table-wrapper{
+  //.ivu-table-fixed{
+  //  z-index: 100;
+  //}
+  .ivu-table,.ivu-table-fixed{
+    background-color: transparent;
+    //margin-bottom: -20px;
+    //height: 100%;
+    &:before{
+      height:0;
+    }
+    .ivu-table-header,.ivu-table-fixed-header{
+      thead{
+        tr{
+          th{
+            padding: 0;
+            height: 48px;
+            border:none;
+            .ivu-table-cell{
+              display: flex;
+              align-items: center;
+              &.ivu-table-cell-with-selection{
+                justify-content: center;
+                &.is-indeterminate{
+                  .ivu-checkbox-wrapper{
+                    .ivu-checkbox{
+                      .ivu-checkbox-inner{
+                        &:after{
+                          content: '';
+                          display: table;
+                          width: 8px;
+                          height: 8px;
+                          background-color: #0E6BDC;
+                          position: absolute;
+                          top: 20%;
+                          transform: none;
+                          left: 25%;
+                          border: none;
+                          transition: none;
+                        }
+                      }
+                    }
+                  }
+                }
+                .ivu-checkbox-wrapper{
+                  .ivu-checkbox {
+                    &.ivu-checkbox-checked {
+                      .ivu-checkbox-inner {
+                        background-color: #0E6BDC;
+                        border-color: #0E6BDC;
+                        border-radius: 2px;
+                        &:after {
+                          width: 6px;
+                          height: 12px;
+                          top:0
+                          //border-color: #0E6BDC;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .ivu-poptip{
+                .ivu-poptip-rel{
+                  .ivu-table-filter{
+                    i{
+                      &:before{
+                        //content: '\e827';
+                        display: inline-block;
+                        width: 19px;
+                        height: 19px;
+                        //todo:更换成本地图标
+                        //background: url("./img/filter-normal.svg") no-repeat center;
+                        //background-size: 100% 100%;
+                      }
+                      &.on{
+                        &:before{
+                          //content: '\e827';
+                          display: inline-block;
+                          width: 19px;
+                          height: 19px;
+                          //todo:更换成本地图标
+                          //background: url("./img/filter-active.svg") no-repeat center;
+                          //background-size: 100% 100%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.left-space{
+              .ivu-table-cell{
+                padding-left: 50px;
+              }
+            }
+            &.left-space-42{
+              .ivu-table-cell{
+                padding-left: 42px;
+              }
+            }
+            &.left-space-32{
+              .ivu-table-cell{
+                padding-left: 32px;
+              }
+            }
+            &.left-name{
+              .ivu-table-cell{
+                // padding-right: 50px;
+              }
+            }
+            &.left-desc{
+              .ivu-table-cell{
+                padding-left: 50px;
+              }
+            }
+            &.time{
+              .ivu-table-cell{
+                padding-right: 120px;
+              }
+            }
+            &.right-space{
+               .ivu-table-cell{
+                 padding-right: 50px;
+               }
+             }
+            &.ivu-table-column-right{
+              .ivu-table-cell{
+                justify-content: flex-end;
+              }
+            }
+            &.ivu-table-column-center{
+              .ivu-table-cell{
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    th{
+      background-color:#353F54;
+      color:#fff;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    td{
+      background-color:transparent;
+      border:none;
+      color:#fff;
+      font-size: 14px;
+      &.left-space{
+        .ivu-table-cell{
+          padding: 14px;
+          padding-left:50px
+        }
+      }
+      &.left-space-32{
+        .ivu-table-cell{
+          padding: 14px;
+          padding-left:32px
+        }
+      }
+      &.left-desc{
+        .ivu-table-cell{
+          padding: 14px;
+          padding-left:50px;
+          padding-right:0px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          width:820px;
+          // text-overflow: ellipsis !important;
+          // overflow:hidden;white-space:nowrap;
+        }
+      }
+      &.left-name{
+        .ivu-table-cell{
+          padding: 14px;
+          // padding-right:0px;
+          overflow: hidden;
+          text-overflow: ellipsis !important;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          max-width:150px;
+          word-wrap:break-word;
+          // word-break: break-all; 
+          // text-overflow: ellipsis !important;
+          // overflow:hidden;white-space:nowrap;
+        }
+      }
+      &.left-fence{
+        .ivu-table-cell{
+          padding: 14px;
+          padding-right:50px;
+          // padding-right:0px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          width:220px;
+          // text-overflow: ellipsis !important;
+          // overflow:hidden;white-space:nowrap;
+        }
+      }
+      &.right-space{
+        .ivu-table-cell{
+          padding-right: 50px;
+        }
+      }
+      &.no-text{
+        color:#8A8E9C;
+      }
+    }
+    &.ivu-table-stripe{
+      .ivu-table-body,.ivu-table-fixed-body{
+        tr:nth-child(1n){
+          td{
+            background-color:#313A4E;
+          }
+        }
+        tr:nth-child(2n){
+          td{
+            background-color:#353F54;
+          }
+        }
+        tr.ivu-table-row-hover{
+          td{
+            background-color: #3F4962;
+          }
+        }
+        //tr:last-child{
+        //  td{
+        //    background-color: red !important;
+        //  }
+        //}
+        .ivu-table-row{
+          &.ivu-table-row-highlight{
+            td{
+              background-color: #3F4962;
+            }
+          }
+          .ivu-table-cell-with-selection{
+            .ivu-checkbox-wrapper{
+              .ivu-checkbox{
+                .ivu-checkbox-inner{
+                }
+                &.ivu-checkbox-checked{
+                  .ivu-checkbox-inner{
+                    background-color: #0E6BDC;
+                    border-color: #0E6BDC;
+                    border-radius: 2px;
+                    &:after{
+                      width: 6px;
+                      height: 12px;
+                      top: 0;
+                      //border-color: #0E6BDC;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .ivu-checkbox-inner{
+      background-color: transparent;
+      border-color: #8A8E9C;
+    }
+  }
+  //表格加链接跳转页面，鼠标移入样式
+  &.click-style{
+    .ivu-table-body{
+      .ivu-table-tbody{
+        .ivu-table-row{
+          cursor: pointer;
+        }
+      }
+    }
+    .ivu-table-tip{
+      table{
+        tr{
+          td{
+            font-size: 12px !important;
+            color:#7B808F !important;
+          }
+        }
+      }
+    }
+  }
+  &.car-form-table{
+    .ivu-table{
+      .ivu-table-header{
+        thead{
+          tr {
+            th {
+              .ivu-table-cell {
+                &.ivu-table-cell-with-selection{
+                  &.is-indeterminate{
+                    .ivu-checkbox-wrapper{
+                      .ivu-checkbox{
+                        .ivu-checkbox-inner{
+                          &:after{
+                            margin-top: 0px;
+                            margin-left: 0px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .ivu-poptip {
+                  .ivu-icon {
+                    &:before {
+                      margin-top: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .ivu-table-body {
+        // &.ivu-table-overflowY{
+        //   max-height:2.4rem !important;
+        // }
+        &.ivu-table-overflowX{
+          overflow-x:hidden;
+        }
+        // &.ivu-table-overflowX{
+        //   max-height:220px
+        // }
+        // max-height:200px;
+        table{
+          width: 100% !important;
+        }
+      }
+      .ivu-table-tip {
+        td {
+          color: #7B808F;
+        }
+      }
+    }
+  }
+  &.car-table{
+    .ivu-table{
+      &.ivu-table-stripe {
+        th {
+          background-color: #353F54;
+        }
+        .ivu-table-body{
+          &.ivu-table-overflowY{
+            max-height:230px
+          }
+          tr:nth-child(2n){
+            td{
+              // background-color: red;
+              background-color: #353F54;
+            }
+          }
+          tr:nth-child(2n+1){
+            td{
+              background-color: #2F394D;
+              // background-color: #2F394D;
+            }
+          }
+          tr.ivu-table-row-hover{
+            td{
+              background-color: #353F54;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ivu-tooltip-popper{
+  .ivu-tooltip-content{
+    .ivu-tooltip-inner{
+      background-color: #455068;
+      box-shadow: #040813;
+      max-width: 500px;
+      //word-wrap:break-word;
+      span{
+        //display: inline-block;
+        //word-wrap:break-spaces;
+        //word-wrap:break-word;
+      }
+    }
+  }
+}
+
+//iview表格筛选poptip样式覆盖
+.ivu-poptip-popper{
+  &.ivu-table-popper{
+    .ivu-poptip-content{
+      box-shadow: 0 0 12px #040813;
+      color: #fff;
+      .ivu-poptip-arrow{
+        border-bottom-color: #455068;
+        &:after{
+          border-bottom-color: #455068;
+        }
+      }
+      .ivu-poptip-inner{
+        background-color: #455068;
+        .ivu-poptip-body{
+          .ivu-poptip-body-content{
+            min-width: 170px;
+            //过滤样式覆盖
+            .ivu-table-filter-list{
+              //padding: 16px 0;
+              .ivu-table-filter-list-item{
+                padding: 0 16px 8px;
+                max-height: 225px;
+                overflow-y: auto;
+                .ivu-checkbox-group{
+                  .ivu-checkbox-wrapper{
+                    margin-right: 0;
+                    padding: 8px 0;
+                    .ivu-checkbox{
+                      float: right;
+                      .ivu-checkbox-inner{
+                        border: none;
+                        background-color: transparent;
+                        &.ivu-checkbox-focus{
+                          box-shadow: none;
+                        }
+                      }
+                      .ivu-checkbox-input{
+
+                      }
+                    }
+                    &.ivu-checkbox-wrapper-checked{
+                      color: #0E6BDC;
+                      font-weight: bold;
+                      .ivu-checkbox-checked{
+                        .ivu-checkbox-inner{
+                          background-color: transparent;
+                          &:after{
+                            width: 8px;
+                            height: 14px;
+                            border-color: #0E6BDC;
+                            border-width: 1px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .ivu-table-filter-footer{
+                text-align: center;
+                border-top-color:rgba(255,255,255,0.14) ;
+                padding: 12px 0;
+                .ivu-btn{
+                  background-color: transparent;
+                  color: #fff;
+                  &:first-child{
+                    float: right;
+                    color: #0E6BDC;
+                    margin-right: 17px;
+                  }
+                  &:last-child{
+                    float: left;
+                    margin-left: 17px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*table过滤图标样式覆盖*/
+//.ivu-table{
+//  .ivu-table-header{
+//    th{
+//      .ivu-table-cell{
+//        .ivu-poptip{
+//          .ivu-poptip-rel{
+//            .ivu-table-filter{
+//              .ivu-icon{
+//                &:before{
+//                  content: ' ';
+//                  background: url("../../public/img/admin/add.png");
+//                  //@include setBkByHW($imgUrl+$searchImg,60%,60%);
+//                }
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//report table 表格样式覆盖
+.table_shadow{
+  box-shadow: 20px 0 16px rgba(0,0,0,0.15);
+}
+.driver_score_table{
+  .ivu-table-fixed{
+    //background-color: red !important;
+    //box-shadow: 20px 0 16px rgba(0,0,0,0.15);
+    //background: transparent !important;
+    //padding-bottom: 40px;
+    //height: 666px !important;
+    //margin-bottom: -20px;
+    //height: 100%;
+    //& .ivu-table-fixed-body{
+    //  background-color :red !important;
+    //}
+    .ivu-table-fixed-body{
+
+    }
+  }
+  .ivu-table-body {
+    //max-height: 610px !important;
+    //background-color: red;
+    //& .ivu-tooltip{
+    //  width: 100%;
+    //  .ivu-tooltip-rel{
+    //    width: 100%;
+    //    margin-top: 6px;
+    //    overflow: hidden !important;
+    //    text-overflow: ellipsis !important;
+    //    white-space: nowrap !important;
+    //  }
+    //}
+    &::-webkit-scrollbar-corner{
+      background: transparent;
+    }
+    &::-webkit-scrollbar-track{
+      height:6px !important;
+      background:#222938;
+      border-radius:3px;
+    }
+    ::-webkit-scrollbar-track-piece{
+      height: 6px !important;
+    }
+    &::-webkit-scrollbar{
+      height:6px;
+      //background:#404758 !important;
+      background-color: transparent;
+      border-radius:3px;
+    }
+    &::-webkit-scrollbar-thumb{
+      height: 6px !important;
+      background:#404758 !important;
+    }
+    &.ivu-table-overflowX{
+      //overflow-x:hidden;
+    }
+  }
+  .ivu-table-tip{
+    overflow-x: hidden;
+  }
+}
+//修改iview表格滚动条样式
+.ivu-table-body::-webkit-scrollbar,.ivu-table-filter-list-item::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+  border-radius:10px;
+}
+/* 滚动槽 */
+.ivu-table-body::-webkit-scrollbar-track,.ivu-table-filter-list-item::-webkit-scrollbar-track {
+  border-radius:10px;
+  width: 5px;
+  background-color: transparent;
+}
+.ivu-table-body::-webkit-scrollbar-thumb,.ivu-table-filter-list-item::-webkit-scrollbar-thumb {
+  background-color:rgba(255,255,255,0.5);
+  border-radius:10px;
+}
+//.ivu-table-overflowX::-webkit-scrollbar
+//{
+//  display: none;
+//  height:6px;
+//  background:#404758;
+//  border-radius:3px;
+//}
+//.ivu-table-overflowX::-webkit-scrollbar-thumb{
+//  display: none;
+//  background-color:#222938;
+//  border-radius:3px;
+//}
+.ivu-table-overflowX{
+  overflow-x: hidden !important;
+}
+.ivu-table-row{
+  .fleet_name_ellipsis{
+    .ivu-table-cell{
+      max-width: 220px !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+    }
+  }
+  .sub_name_ellipsis{
+    word-wrap:break-word !important;
+    .ivu-table-cell{
+      max-width: 220px !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      // white-space: nowrap !important;
+    }
+  }
+  .monitoring_name_ellipsis{
+    .ivu-table-cell {
+      max-width: 160px !important;
+    }
+  }
+  .table_ceil_ellipsiss{
+    .ivu-table-cell{
+      max-width: 120px ;
+      //max-width: 100px ;
+      .ivu-tooltip{
+        width: 100%;
+        .ivu-tooltip-rel{
+          width: 100%;
+          margin-top: 6px;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+      }
+    }
+  }
+  .sub_name_ellipsis{
+    word-wrap:break-word !important;
+    .ivu-table-cell{
+      max-width: 120px ;
+      //max-width: 100px ;
+      .ivu-tooltip{
+        width: 100%;
+        .ivu-tooltip-rel{
+          width: 100%;
+          margin-top: 6px;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          // white-space: nowrap !important;
+          color: #0E6BDC !important;
+          word-break: break-word !important;
+        }
+      }
+    }
+  }
+  .table_ceil_ellipsis,.fleet_name_ellipsis,.monitoring_name_ellipsis{
+    .ivu-table-cell{
+      max-width: 120px ;
+      //max-width: 100px ;
+      .ivu-tooltip{
+        width: 100%;
+        .ivu-tooltip-rel{
+          width: 100%;
+          margin-top: 6px;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+      }
+    }
+  }
+
+  .user-recipients-name-left .ivu-table-cell{
+    margin-left:70px;
+  }
+
+  .table_ceil_ellipsis_desc,.fleet_name_ellipsis,.monitoring_name_ellipsis{
+    .ivu-table-cell {
+      max-width: 400px;
+      .ivu-tooltip{
+        width: 100%;
+        .ivu-tooltip-rel{
+          width: 100%;
+          margin-top: 6px;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+      }
+    }
+  }
+
+}
+.ivu-table-row{
+  .table_ceil_ellipsis_fleet{
+    .ivu-table-cell{
+      width: 850px ;
+      //max-width: 100px ;
+      .ivu-tooltip{
+        width: 100%;
+        .ivu-tooltip-rel{
+          width: 100%;
+          display: -webkit-box;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          // -webkit-line-clamp: 3 !important;
+          white-space: nowrap !important;
+          // word-wrap: break-word !important;
+          -webkit-line-clamp: 3 !important;
+          -webkit-box-orient: vertical !important
+        }
+      }
+    }
+  }
+}
+//report表格样式
+@media screen and (max-height: 1080px) {
+  .report_vin{
+    padding-left: 50px;
+    text-align: left;
+  }
+  .report_vn{
+    padding-left: 65px;
+    text-align: left !important;
+  }
+  .report_drive{
+    padding-right: 65px;
+    text-align: right !important;
+  }
+  .report_mil{
+    padding-right: 90px;
+    text-align: right !important;
+  }
+  .report_brand{
+    padding-left: 80px;
+    text-align: left !important;
+  }
+  .report_model{
+    padding-left: 80px;
+    text-align: left !important;
+  }
+  .report_fleet{
+    padding-left: 82px;
+    text-align: left !important;
+  }
+  .report_year{
+    padding-left: 85px;
+    text-align: left !important;
+  }
+}
+@media screen and (min-height: 1080px) { /*当屏幕尺寸小于1920px时，应用下面的CSS样式*/
+  .report_vin{
+    padding-left: 50px;
+    text-align: left;
+  }
+  .report_vn{
+    padding-left: 50px;
+    text-align: left !important;
+  }
+  .report_drive{
+    padding-right: 50px;
+    text-align: right !important;
+  }
+  .report_mil{
+    padding-right: 80px;
+    text-align: right !important;
+  }
+  .report_brand{
+    padding-left: 70px;
+    text-align: left !important;
+  }
+  .report_model{
+    padding-left: 67px;
+    text-align: left !important;
+  }
+  .report_fleet{
+    padding-left: 70px;
+    text-align: left !important;
+  }
+  .report_year{
+    padding-left: 72px;
+    text-align: left !important;
+  }
+}

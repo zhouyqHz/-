@@ -1,0 +1,671 @@
+{
+  "accessors": [
+    {
+      "name": "bridge4-Mesh_0_positions",
+      "componentType": 5126,
+      "count": 9560,
+      "min": [
+        -28151.330078125,
+        23.386884689331055,
+        -2594.50927734375
+      ],
+      "max": [
+        27876.634765625,
+        13258.6796875,
+        2582.36279296875
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge4-Mesh_0_normals",
+      "componentType": 5126,
+      "count": 9560,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge4-Mesh_0_texcoords",
+      "componentType": 5126,
+      "count": 9560,
+      "min": [
+        -0.045783817768096924,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge4-Mesh_0_indices",
+      "componentType": 5123,
+      "count": 27456,
+      "min": [
+        0
+      ],
+      "max": [
+        9559
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge4-Mesh_1_positions",
+      "componentType": 5126,
+      "count": 7040,
+      "min": [
+        -10183.9892578125,
+        5.581930160522461,
+        -2724.775390625
+      ],
+      "max": [
+        10262.712890625,
+        12456.6923828125,
+        2747.61376953125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 114720
+    },
+    {
+      "name": "bridge4-Mesh_1_normals",
+      "componentType": 5126,
+      "count": 7040,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 114720
+    },
+    {
+      "name": "bridge4-Mesh_1_texcoords",
+      "componentType": 5126,
+      "count": 7040,
+      "min": [
+        -0.11789059638977051,
+        -0.09824216365814209
+      ],
+      "max": [
+        1.1178905963897705,
+        1.0982420444488525
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 76480
+    },
+    {
+      "name": "bridge4-Mesh_1_indices",
+      "componentType": 5123,
+      "count": 35856,
+      "min": [
+        0
+      ],
+      "max": [
+        7039
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 54912
+    },
+    {
+      "name": "bridge4-Mesh_2_positions",
+      "componentType": 5126,
+      "count": 72,
+      "min": [
+        -10243.3486328125,
+        11229.2900390625,
+        -1211.418212890625
+      ],
+      "max": [
+        10118.345703125,
+        13422.2490234375,
+        1211.418212890625
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 199200
+    },
+    {
+      "name": "bridge4-Mesh_2_normals",
+      "componentType": 5126,
+      "count": 72,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 199200
+    },
+    {
+      "name": "bridge4-Mesh_2_texcoords",
+      "componentType": 5126,
+      "count": 72,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 132800
+    },
+    {
+      "name": "bridge4-Mesh_2_indices",
+      "componentType": 5123,
+      "count": 108,
+      "min": [
+        0
+      ],
+      "max": [
+        71
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 126624
+    },
+    {
+      "name": "bridge4-Mesh_3_positions",
+      "componentType": 5126,
+      "count": 110,
+      "min": [
+        -35000,
+        49.96921920776367,
+        -1947.275634765625
+      ],
+      "max": [
+        35000,
+        2920.21630859375,
+        1947.275634765625
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 200064
+    },
+    {
+      "name": "bridge4-Mesh_3_normals",
+      "componentType": 5126,
+      "count": 110,
+      "min": [
+        -1,
+        -0.9851139187812805,
+        -1
+      ],
+      "max": [
+        1,
+        0.9851139187812805,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 200064
+    },
+    {
+      "name": "bridge4-Mesh_3_texcoords",
+      "componentType": 5126,
+      "count": 110,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 133376
+    },
+    {
+      "name": "bridge4-Mesh_3_indices",
+      "componentType": 5123,
+      "count": 258,
+      "min": [
+        0
+      ],
+      "max": [
+        109
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 126840
+    },
+    {
+      "name": "bridge4-Mesh_4_positions",
+      "componentType": 5126,
+      "count": 8,
+      "min": [
+        -35000,
+        466.58551025390625,
+        -1757.608642578125
+      ],
+      "max": [
+        35000,
+        2553.781494140625,
+        1751.071533203125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 201384
+    },
+    {
+      "name": "bridge4-Mesh_4_normals",
+      "componentType": 5126,
+      "count": 8,
+      "min": [
+        -0.33868780732154846,
+        0.9404674172401428,
+        0
+      ],
+      "max": [
+        0.3398839235305786,
+        0.9851139187812805,
+        0
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 201384
+    },
+    {
+      "name": "bridge4-Mesh_4_texcoords",
+      "componentType": 5126,
+      "count": 8,
+      "min": [
+        0,
+        0.048700571060180664
+      ],
+      "max": [
+        1,
+        0.9496208429336548
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 134256
+    },
+    {
+      "name": "bridge4-Mesh_4_indices",
+      "componentType": 5123,
+      "count": 18,
+      "min": [
+        0
+      ],
+      "max": [
+        7
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 127356
+    },
+    {
+      "name": "bridge4-Mesh_5_positions",
+      "componentType": 5126,
+      "count": 192,
+      "min": [
+        -28276.63671875,
+        1812.184814453125,
+        -2116.766845703125
+      ],
+      "max": [
+        27999.876953125,
+        2145.92431640625,
+        2116.766845703125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 201480
+    },
+    {
+      "name": "bridge4-Mesh_5_normals",
+      "componentType": 5126,
+      "count": 192,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 201480
+    },
+    {
+      "name": "bridge4-Mesh_5_texcoords",
+      "componentType": 5126,
+      "count": 192,
+      "min": [
+        -0.03474396467208862,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 134320
+    },
+    {
+      "name": "bridge4-Mesh_5_indices",
+      "componentType": 5123,
+      "count": 336,
+      "min": [
+        0
+      ],
+      "max": [
+        191
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 127392
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "bridge4",
+      "byteLength": 671488,
+      "uri": "bridge4.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 203784,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 203784,
+      "byteOffset": 203784,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 135856,
+      "byteOffset": 407568,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_3",
+      "buffer": 0,
+      "byteLength": 128064,
+      "byteOffset": 543424,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "uri": "hangbiao-zhuzi_1.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "材质.1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.80000001192093,
+          0.80000001192093,
+          0.80000001192093,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.5",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.63921570777893,
+          0.1803921610117,
+          0.19607843458652,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "qiaored",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.28627452254295,
+          0.14901961386204,
+          0.20000000298023,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.3",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3647058904171,
+          0.37647059559822,
+          0.40392157435417,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "qiaoblack",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0666666701436,
+          0.08627451211214,
+          0.09803921729326,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "bridge4-Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 3,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 4,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 20,
+            "NORMAL": 21,
+            "TEXCOORD_0": 22
+          },
+          "indices": 23,
+          "material": 5,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "bridge4",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

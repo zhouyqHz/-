@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "result": [
+    {
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "fleet": "Su Zhou"
+    },
+    {
+      "vin": "LVGBXXXXXXXXXXX",
+      "name": "XXXXXX",
+      "distance": 1020,
+      "mileage": 5119,
+      "model": "Levin HV",
+      "year": 2019,
+      "fleet": "Su Zhou"
+    }
+  ]
+}

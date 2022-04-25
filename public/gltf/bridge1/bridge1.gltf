@@ -1,0 +1,287 @@
+{
+  "accessors": [
+    {
+      "name": "bridge1-Mesh_0_positions",
+      "componentType": 5126,
+      "count": 382,
+      "min": [
+        -35000,
+        49.96921920776367,
+        -2116.766845703125
+      ],
+      "max": [
+        35000,
+        13422.2490234375,
+        2116.766845703125
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge1-Mesh_0_normals",
+      "componentType": 5126,
+      "count": 382,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge1-Mesh_0_texcoords",
+      "componentType": 5126,
+      "count": 382,
+      "min": [
+        -0.03474396467208862,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge1-Mesh_0_indices",
+      "componentType": 5123,
+      "count": 720,
+      "min": [
+        0
+      ],
+      "max": [
+        381
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "name": "bridge1-Mesh_1_positions",
+      "componentType": 5126,
+      "count": 8488,
+      "min": [
+        -28151.330078125,
+        23.386884689331055,
+        -1567.6619873046875
+      ],
+      "max": [
+        27876.634765625,
+        13505.6484375,
+        1633.071044921875
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 4584
+    },
+    {
+      "name": "bridge1-Mesh_1_normals",
+      "componentType": 5126,
+      "count": 8488,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 4584
+    },
+    {
+      "name": "bridge1-Mesh_1_texcoords",
+      "componentType": 5126,
+      "count": 8488,
+      "min": [
+        -0.045783817768096924,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 3056
+    },
+    {
+      "name": "bridge1-Mesh_1_indices",
+      "componentType": 5123,
+      "count": 24648,
+      "min": [
+        0
+      ],
+      "max": [
+        8487
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 1440
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "bridge1",
+      "byteLength": 334576,
+      "uri": "bridge1.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 106440,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 106440,
+      "byteOffset": 106440,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 70960,
+      "byteOffset": 212880,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_3",
+      "buffer": 0,
+      "byteLength": 50736,
+      "byteOffset": 283840,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "uri": "hangbiao-zhuzi_1.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "材质",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "材质.1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.80000001192093,
+          0.80000001192093,
+          0.80000001192093,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "bridge1-Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "bridge1",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

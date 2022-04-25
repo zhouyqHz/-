@@ -1,0 +1,35 @@
+@import "../scss/mixin";
+//鼠标移入图标动画
+@include keyframes(move){
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+.move_animate{
+  animation: move 2s infinite alternate;
+  animation-timing-function:linear;
+  animation-play-state:running;
+}
+//超出隐藏背景样式
+.overflow_bk{
+  position: absolute;
+  pointer-events: none;
+  z-index: 200;
+  top:5px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  //background:linear-gradient(90deg,rgba(70,79,101,0) 50%,rgba(70,79,101,1) 100%);
+}
+.main_bk{
+  background:linear-gradient(90deg,rgba(70,79,101,0) 50%,rgba(70,79,101,1) 100%);
+}
+.score_bk{
+  background:linear-gradient(90deg,rgba(49,58,79,0) 50%,rgba(49,58,79,1) 100%);
+}
+.flex_end{
+  justify-content: flex-end !important;
+}

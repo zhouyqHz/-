@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "result": [
+    {
+      "mName": "XXXXXXXXXXX",
+      "num": 30,
+      "gName":"XXXXXXXXXXX" ,
+      "type": "Go in",
+      "status": "Monitoring",
+      "mTime": "2020-XX-XX 19:36~2020-XX-XX 19:36",
+      "time": "2020-XX-XX 19:36:XX",
+      "fenceid": "20190720115448952",
+      "id": "task_20190720143049021",
+      "ids": []
+    },{
+      "mName": "XXXXXXXXXXX",
+      "num": 30,
+      "gName":"XXXXXXXXXXX" ,
+      "type": "Go out",
+      "status": "Monitoring",
+      "mTime": "2020-XX-XX 19:36~2020-XX-XX 19:36",
+      "time": "2020-XX-XX 19:36:XX",
+      "fenceid": "20190719152303629",
+      "id": "task_20190719132807737",
+      "ids": []
+    },{
+      "mName": "XXXXXXXXXXX",
+      "num": 30,
+      "gName":"XXXXXXXXXXX" ,
+      "type": "Go in-out",
+      "status": "Finish",
+      "mTime": "2020-XX-XX 19:36~2020-XX-XX 19:36",
+      "time": "2020-XX-XX 19:36:XX",
+      "fenceid": "20190717133254689",
+      "id": "task_20190719111245541",
+      "ids": []
+    },{
+      "mName": "XXXXXXXXXXX",
+      "num": 30,
+      "gName":"XXXXXXXXXXX" ,
+      "type": "Go in-out",
+      "status": "Finish",
+      "mTime": "2020-XX-XX 19:36~2020-XX-XX 19:36",
+      "time": "2020-XX-XX 19:36:XX",
+      "fenceid": "20190714144845049",
+      "id": "task_20190716204409794",
+      "ids": []
+    }
+  ]
+}

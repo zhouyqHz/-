@@ -1,0 +1,287 @@
+{
+  "accessors": [
+    {
+      "name": "hangbiao-Mesh_0_positions",
+      "componentType": 5126,
+      "count": 564,
+      "min": [
+        -294.93212890625,
+        7.273655414581299,
+        -258.39544677734375
+      ],
+      "max": [
+        293.9293212890625,
+        1854.291748046875,
+        258.39544677734375
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "hangbiao-Mesh_0_normals",
+      "componentType": 5126,
+      "count": 564,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "hangbiao-Mesh_0_texcoords",
+      "componentType": 5126,
+      "count": 564,
+      "min": [
+        -0.031924426555633545,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "name": "hangbiao-Mesh_0_indices",
+      "componentType": 5123,
+      "count": 1596,
+      "min": [
+        0
+      ],
+      "max": [
+        563
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "name": "hangbiao-Mesh_1_positions",
+      "componentType": 5126,
+      "count": 1896,
+      "min": [
+        -150.4496307373047,
+        689.99755859375,
+        -152.10177612304688
+      ],
+      "max": [
+        153.75392150878906,
+        1885.36328125,
+        152.10177612304688
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 6768
+    },
+    {
+      "name": "hangbiao-Mesh_1_normals",
+      "componentType": 5126,
+      "count": 1896,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 6768
+    },
+    {
+      "name": "hangbiao-Mesh_1_texcoords",
+      "componentType": 5126,
+      "count": 1896,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 4512
+    },
+    {
+      "name": "hangbiao-Mesh_1_indices",
+      "componentType": 5123,
+      "count": 7344,
+      "min": [
+        0
+      ],
+      "max": [
+        1894
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 3192
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "hangbiao",
+      "byteLength": 96600,
+      "uri": "hangbiao.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 29520,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 29520,
+      "byteOffset": 29520,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 19680,
+      "byteOffset": 59040,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_3",
+      "buffer": 0,
+      "byteLength": 17880,
+      "byteOffset": 78720,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "uri": "hangbiao-zhuzi_1.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "材质",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "trafficred",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.86000001430511,
+          0.32679998874664,
+          0.32679998874664,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "hangbiao-Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "hangbiao",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "hangbiao-zhuzi_1",
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+/*表格过滤图标覆盖*/
+.ivu-table-fixed .ivu-table-fixed-header th .ivu-table-cell .ivu-poptip .ivu-poptip-rel .ivu-table-filter .ivu-icon:before{
+    background: url("../../public/img/admin/filter-normal.png") no-repeat;
+    background-size: 100% 100%;
+    content: ' ';
+    margin-top: 2px;
+}
+/*表格过滤图标高亮覆盖*/
+.ivu-table-fixed .ivu-table-fixed-header th .ivu-table-cell .ivu-poptip .ivu-poptip-rel .ivu-table-filter .ivu-icon.on:before{
+    background: url("../../public/img/admin/filter-active.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*表格过滤图标覆盖*/
+.ivu-table .ivu-table-header th .ivu-table-cell .ivu-poptip .ivu-poptip-rel .ivu-table-filter .ivu-icon:before{
+    background: url("../../public/img/admin/filter-normal.png") no-repeat;
+    background-size: 100% 100%;
+    content: ' ';
+    margin-top: 2px;
+}
+/*表格过滤图标高亮覆盖*/
+.ivu-table .ivu-table-header th .ivu-table-cell .ivu-poptip .ivu-poptip-rel .ivu-table-filter .ivu-icon.on:before{
+    background: url("../../public/img/admin/filter-active.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*选择框下拉图标覆盖*/
+.el-select .el-input .el-input__suffix .el-input__suffix-inner i.el-icon-arrow-up:before{
+    background: url("../../public/img/admin/drop-down.png") no-repeat;
+    background-size: 100% 100%;
+    /*transform: rotateZ(180deg);*/
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    transform: rotate(180deg);
+}
+.el-select .el-input .el-input__suffix .el-input__suffix-inner i.el-icon-arrow-up.is-reverse:before{
+    /*transform: rotateZ(0deg);*/
+}
+/*错误信息弹窗图标覆盖*/
+.el-message.el-message--error .el-icon-error:before{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../../public/img/admin/error.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+/*成功图标覆盖*/
+.el-message.el-message--success .el-icon-success:before{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../../public/img/admin/success.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+/*警告图标覆盖*/
+.el-message.el-message--warning .el-icon-warning:before{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url("../../public/img/admin/tip_big.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    margin-right: 6px;
+}
+/*登录input图标覆盖*/
+.el-icon-user:before {
+    margin-top: 14px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../../public/img/login/user.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+.el-icon-lock:before {
+    margin-top: 15px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../../public/img/login/password.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}
+.el-icon-secure:before {
+    margin-top: 15px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../../public/img/login/code.png") no-repeat;
+    background-size: 100% 100%;
+    content: '';
+}

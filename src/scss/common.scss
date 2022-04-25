@@ -1,0 +1,237 @@
+@import "./mixin";
+.border_style{
+  border:1px solid rgba(255,255,255,0.19) !important;
+  box-sizing: border-box;
+  font-weight:400;
+}
+.bk_style{
+  @include gradient(135deg,rgba(70,79,101,1),100%,rgba(58,65,85,1),0%);
+  box-shadow:0px 0px 14px 0px rgba(13,16,26,1);
+  border-radius:0px 0px 3px 3px;
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+}
+.flex_column{
+  display: flex;
+  flex-direction: column;
+}
+//用户不可选择
+.no_select{
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  user-select:none;
+}
+//按钮共同样式
+.btn_confirm_style{
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  background: #0E6BDC;
+  font-size:14px;
+  font-weight:600;
+  &:hover{
+    background: #267ADF;
+  }
+}
+.btn_cancel_style{
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  font-size:14px;
+  font-weight:600;
+  border:1px solid rgba(14,107,220,1);
+  &:hover{
+    border:1px solid rgba(14,107,220,1);
+    color: #0E6BDC;
+  }
+}
+.el-select-dropdown{
+    min-width: 340px;
+    transform-origin: center bottom;
+    z-index: 2005;
+    position: absolute;
+    top: 524px;
+    left: 733px;
+}
+.btn-export{
+  @extend .flex_row;
+  font-size:14px;
+  background:#00a56d;
+  width: 136px;
+  height: 32px;
+  font-weight:500;
+  color: #FFFFFF;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  .name{
+    font-size:14px !important;
+    line-height: 32px;
+  }
+  .icon{
+    width: 32px;
+    height: 32px;
+    //@include setBkByHW($imgUrlAdmin+$export,50%,50%);
+  }
+}
+//-----------------------------------------------全局按钮样式------------------------
+/*背景色--按钮交互样式*/
+.btn-bg-normal{
+  text-align: center;
+  background-color:#0E6BDC;
+  font-size: 14px;
+  font-weight: 600;
+  color:#fff;
+  cursor: pointer;
+}
+.btn-bg-hover{
+  background-color:#267ADF;
+}
+.btn-bg-click{
+  background-color: #0C60C5;
+}
+.btn-bg-disable{
+  background-color: #2E3C61;
+  color:#4D5D87;
+  cursor:not-allowed;
+}
+/*边框--按钮交互样式*/
+.btn-bd-normal{
+  text-align: center;
+  border: 1px solid #0E6BDC;
+  font-size: 14px;
+  font-weight: 600;
+  color:#fff;
+  cursor: pointer;
+}
+.btn-bd-hover{
+  color: #0E6BDC;
+}
+.btn-bd-click{
+  border-color:#0C60C5;
+  color:#0C60C5;
+}
+.btn-bd-disable{
+  border-color: #0A4D9E;
+  color:#545D77;
+  cursor:not-allowed;
+}
+/*文字(取消)--按钮交互样式*/
+.btn-canc-normal{
+  font-size: 12px;
+  font-weight: 500;
+  color:#fff;
+  cursor: pointer;
+}
+.btn-canc-hover{
+  color: #267ADF;
+}
+.btn-canc-click{
+  color:#0C60C5;
+}
+.btn-canc-disable{
+  color:#4D5D87;
+  cursor:not-allowed;
+}
+/*文字(确认)--按钮交互样式*/
+.btn-con-normal{
+  font-size: 12px;
+  font-weight: 500;
+  color:#0E6BDC;
+  cursor: pointer;
+}
+.btn-con-hover{
+  color: #267ADF;
+}
+.btn-con-click{
+  color:#0C60C5;
+}
+.btn-con-disable{
+  color:#2E3C61;
+  cursor:not-allowed;
+}
+/*导出--按钮交互样式*/
+.btn-exp-normal{
+  border-radius: 50px 0 0 50px;
+  background-color:#0E6BDC;
+  cursor: pointer;
+}
+.btn-exp-hover{
+  background-color:#267ADF;
+}
+.btn-exp-click{
+  background-color:#0C60C5;
+}
+
+.max-mask{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding:136px 24px 24px ;
+  z-index: 10;
+  background-color:rgba(36,43,60,0.84);
+}
+.max-content{
+  background-color:#313A4E;
+  padding: 24px 24px 0 24px;
+  height: 100%;
+}
+/*title公共样式*/
+.title_has_border{
+  border-left: 4px solid #0E6BDC;
+  color: #FFFFFF;
+  font-size:20px;
+  line-height: 20px;
+  font-weight: 500;
+  height:20px;
+}
+.small_title_has_border{
+  border-left: 3px solid #0E6BDC;
+  color: #FFFFFF;
+  font-size:14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+//统一化scroll样式
+.scroll_style{
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+    border-radius:10px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius:10px;
+    width: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.51);
+    border-radius:10px;
+  }
+}
+
+//权限部分滚动条样式
+.scroll_dark_style{
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+    border-radius:10px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius:10px;
+    width: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #404758;
+    border-radius:10px;
+  }
+}
+

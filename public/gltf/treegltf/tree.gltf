@@ -1,0 +1,299 @@
+{
+  "accessors": [
+    {
+      "name": "tree-Mesh_0_positions",
+      "componentType": 5126,
+      "count": 32,
+      "min": [
+        -1314.048828125,
+        5.865880489349365,
+        -742.2835083007812
+      ],
+      "max": [
+        1314.048828125,
+        4312.74169921875,
+        742.2835083007812
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "tree-Mesh_0_normals",
+      "componentType": 5126,
+      "count": 32,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "tree-Mesh_0_texcoords",
+      "componentType": 5126,
+      "count": 32,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "name": "tree-Mesh_0_indices",
+      "componentType": 5123,
+      "count": 48,
+      "min": [
+        0
+      ],
+      "max": [
+        31
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "name": "tree-Mesh_1_positions",
+      "componentType": 5126,
+      "count": 16,
+      "min": [
+        -1314.048828125,
+        5.865880489349365,
+        -742.2835083007812
+      ],
+      "max": [
+        1314.048828125,
+        4312.74169921875,
+        742.2835083007812
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 384
+    },
+    {
+      "name": "tree-Mesh_1_normals",
+      "componentType": 5126,
+      "count": 16,
+      "min": [
+        -1,
+        0,
+        0
+      ],
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 384
+    },
+    {
+      "name": "tree-Mesh_1_texcoords",
+      "componentType": 5126,
+      "count": 16,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 2,
+      "byteOffset": 256
+    },
+    {
+      "name": "tree-Mesh_1_indices",
+      "componentType": 5123,
+      "count": 24,
+      "min": [
+        0
+      ],
+      "max": [
+        15
+      ],
+      "type": "SCALAR",
+      "bufferView": 3,
+      "byteOffset": 96
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "tree",
+      "byteLength": 1680,
+      "uri": "tree.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 576,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 576,
+      "byteOffset": 576,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 384,
+      "byteOffset": 1152,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_3",
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 1536,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "name": "bigtree",
+      "uri": "bigtree.png"
+    },
+    {
+      "name": "archmodels58_051_norway_spruce_diffuse",
+      "uri": "archmodels58_051_norway_spruce_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "default",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.95
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "archmodels58_0511d",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.995
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    }
+  ],
+  "meshes": [
+    {
+      "name": "tree-Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "tree",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "bigtree",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "archmodels58_051_norway_spruce_diffuse",
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
